@@ -1,11 +1,13 @@
-var express = require('express');
-var app = express();
-var path = require('path');
+const express = require('express');
+const app = express();
+const path = require('path');
 
-app.use(express.static('dist'));
+const port = process.env.PORT || 5000;
+
+app.use(express.static('public'));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
+  res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
 
-app.listen(8080, () => console.log('Server is running on: http://localhost:8080'));
+app.listen(port, () => console.log(`Server is running on: http://localhost:${port}`));

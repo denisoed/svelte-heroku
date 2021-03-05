@@ -58,7 +58,7 @@ typings/
 .env
 
 # webpack build directory
-dist
+public
 
 #history
 .history
