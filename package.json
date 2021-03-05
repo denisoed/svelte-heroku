@@ -10,7 +10,8 @@
     "lint": "eslint -c .eslintrc --ext .svelte,.js src",
     "format": "eslint -c .eslintrc --fix --ext .svelte,.js --fix src",
     "format:prettier": "prettier --write src/**/{*.svelte,*.js}",
-    "cli": "pankod-cli add"
+    "cli": "pankod-cli add",
+    "heroku-postbuild": "npm run build"
   },
   "pankod": {
     "projectType": "svelte"
